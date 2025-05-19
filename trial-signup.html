@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Start Your Free Trial - Chatterly</title>
+    <title>Trial Signup - Chatterly</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,7 @@
         <div class="container">
             <div class="logo">
                 <a href="index.html">
-                    <span class="logo-text">Chatterly</span>
+                    <img src="images/logo/chatterly_logo.png" alt="Chatterly" width="180">
                 </a>
             </div>
             <nav>
@@ -42,9 +42,9 @@
 
     <section class="signup-hero">
         <div class="container">
-            <div class="signup-hero-content">
+            <div class="signup-content">
                 <h1>Start Your 14-Day Free Trial</h1>
-                <p>No credit card required. Cancel anytime.</p>
+                <p>Experience the power of Chatterly with no credit card required. Get full access to all features for 14 days.</p>
             </div>
         </div>
     </section>
@@ -53,187 +53,110 @@
         <div class="container">
             <div class="signup-container">
                 <div class="signup-form-wrapper">
-                    <form id="trial-signup-form" class="signup-form">
-                        <div class="form-step active" id="step-1">
-                            <h2>Create Your Account</h2>
-                            <div class="form-group">
-                                <label for="full-name">Full Name</label>
-                                <input type="text" id="full-name" name="full-name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Business Email</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="password">Create Password</label>
-                                <input type="password" id="password" name="password" required>
-                                <p class="form-hint">Must be at least 8 characters</p>
-                            </div>
-                            <div class="form-group">
-                                <label for="company">Company Name</label>
-                                <input type="text" id="company" name="company" required>
-                            </div>
-                            <div class="form-buttons">
-                                <button type="button" class="btn btn-primary next-step">Continue</button>
-                            </div>
-                        </div>
-                        
-                        <div class="form-step" id="step-2">
-                            <h2>Tell Us About Your Business</h2>
-                            <div class="form-group">
-                                <label for="industry">Industry</label>
-                                <select id="industry" name="industry" required>
-                                    <option value="" disabled selected>Select your industry</option>
-                                    <option value="ecommerce">E-commerce</option>
-                                    <option value="saas">SaaS</option>
-                                    <option value="finance">Finance</option>
-                                    <option value="healthcare">Healthcare</option>
-                                    <option value="education">Education</option>
-                                    <option value="real-estate">Real Estate</option>
-                                    <option value="travel">Travel & Hospitality</option>
-                                    <option value="professional-services">Professional Services</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="company-size">Company Size</label>
-                                <select id="company-size" name="company-size" required>
-                                    <option value="" disabled selected>Select company size</option>
-                                    <option value="1-10">1-10 employees</option>
-                                    <option value="11-50">11-50 employees</option>
-                                    <option value="51-200">51-200 employees</option>
-                                    <option value="201-500">201-500 employees</option>
-                                    <option value="501+">501+ employees</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="website">Website URL</label>
-                                <input type="url" id="website" name="website" placeholder="https://yourcompany.com">
-                            </div>
-                            <div class="form-group">
-                                <label>What are your primary goals?</label>
-                                <div class="checkbox-group">
-                                    <label class="checkbox-label">
-                                        <input type="checkbox" name="goals" value="lead-generation">
-                                        <span>Generate more leads</span>
-                                    </label>
-                                    <label class="checkbox-label">
-                                        <input type="checkbox" name="goals" value="customer-support">
-                                        <span>Improve customer support</span>
-                                    </label>
-                                    <label class="checkbox-label">
-                                        <input type="checkbox" name="goals" value="sales-automation">
-                                        <span>Automate sales processes</span>
-                                    </label>
-                                    <label class="checkbox-label">
-                                        <input type="checkbox" name="goals" value="marketing-automation">
-                                        <span>Enhance marketing automation</span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="form-buttons">
-                                <button type="button" class="btn btn-secondary prev-step">Back</button>
-                                <button type="button" class="btn btn-primary next-step">Continue</button>
-                            </div>
-                        </div>
-                        
-                        <div class="form-step" id="step-3">
-                            <h2>Choose Your Plan</h2>
-                            <div class="plan-selection">
-                                <div class="plan-option">
-                                    <input type="radio" id="starter-plan" name="plan" value="starter" checked>
-                                    <label for="starter-plan" class="plan-label">
-                                        <div class="plan-header">
-                                            <h3>Starter</h3>
-                                            <div class="plan-price">$19/month</div>
-                                        </div>
-                                        <div class="plan-features">
-                                            <ul>
-                                                <li><i class="fas fa-check"></i> 1 Chatbot</li>
-                                                <li><i class="fas fa-check"></i> 500 AI conversations/month</li>
-                                                <li><i class="fas fa-check"></i> Basic marketing automation</li>
-                                            </ul>
-                                        </div>
-                                    </label>
-                                </div>
-                                <div class="plan-option recommended">
-                                    <div class="plan-badge">Recommended</div>
-                                    <input type="radio" id="professional-plan" name="plan" value="professional">
-                                    <label for="professional-plan" class="plan-label">
-                                        <div class="plan-header">
-                                            <h3>Professional</h3>
-                                            <div class="plan-price">$49/month</div>
-                                        </div>
-                                        <div class="plan-features">
-                                            <ul>
-                                                <li><i class="fas fa-check"></i> 3 Chatbots</li>
-                                                <li><i class="fas fa-check"></i> 2,000 AI conversations/month</li>
-                                                <li><i class="fas fa-check"></i> Advanced marketing automation</li>
-                                            </ul>
-                                        </div>
-                                    </label>
-                                </div>
-                                <div class="plan-option">
-                                    <input type="radio" id="enterprise-plan" name="plan" value="enterprise">
-                                    <label for="enterprise-plan" class="plan-label">
-                                        <div class="plan-header">
-                                            <h3>Enterprise</h3>
-                                            <div class="plan-price">$99/month</div>
-                                        </div>
-                                        <div class="plan-features">
-                                            <ul>
-                                                <li><i class="fas fa-check"></i> Unlimited Chatbots</li>
-                                                <li><i class="fas fa-check"></i> 5,000 AI conversations/month</li>
-                                                <li><i class="fas fa-check"></i> Custom marketing workflows</li>
-                                            </ul>
-                                        </div>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="form-group terms-group">
-                                <label class="checkbox-label">
-                                    <input type="checkbox" name="terms" required>
-                                    <span>I agree to the <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a></span>
-                                </label>
-                            </div>
-                            <div class="form-buttons">
-                                <button type="button" class="btn btn-secondary prev-step">Back</button>
-                                <button type="submit" class="btn btn-primary">Start Your Free Trial</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="signup-info">
-                    <div class="info-card">
-                        <h3>What's included in your trial:</h3>
-                        <ul class="info-list">
-                            <li><i class="fas fa-check"></i> Full access to all features in your selected plan</li>
-                            <li><i class="fas fa-check"></i> Personalized onboarding assistance</li>
-                            <li><i class="fas fa-check"></i> Pre-built templates for quick setup</li>
-                            <li><i class="fas fa-check"></i> Email support from our team</li>
-                        </ul>
+                    <div class="form-header">
+                        <h2>Create Your Account</h2>
+                        <p>Fill out the form below to get started with your free trial</p>
                     </div>
-                    <div class="testimonial-card">
+                    <form id="signup-form" class="signup-form">
+                        <div class="form-group">
+                            <label for="full-name">Full Name</label>
+                            <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Business Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your business email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company Name</label>
+                            <input type="text" id="company" name="company" placeholder="Enter your company name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="website">Website URL</label>
+                            <input type="url" id="website" name="website" placeholder="https://yourcompany.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Create Password</label>
+                            <input type="password" id="password" name="password" placeholder="Create a secure password" required>
+                            <p class="password-hint">Must be at least 8 characters with a number and special character</p>
+                        </div>
+                        <div class="form-group">
+                            <label for="plan">Select Your Plan</label>
+                            <select id="plan" name="plan" required>
+                                <option value="" disabled selected>Choose a plan</option>
+                                <option value="starter">Starter - $19/month</option>
+                                <option value="professional">Professional - $49/month</option>
+                                <option value="enterprise">Enterprise - $99/month</option>
+                            </select>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">I agree to the <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a></label>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="marketing" name="marketing">
+                            <label for="marketing">I'd like to receive product updates and marketing communications</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-large btn-block">Start My Free Trial</button>
+                    </form>
+                    <div class="form-footer">
+                        <p>Already have an account? <a href="#">Log in</a></p>
+                    </div>
+                </div>
+                <div class="signup-benefits">
+                    <h3>What You'll Get With Your Free Trial</h3>
+                    <ul class="benefits-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Full Access to All Features</h4>
+                                <p>Try every feature Chatterly has to offer with no limitations</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Easy Setup Wizard</h4>
+                                <p>Get up and running in minutes with our guided setup process</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Pre-built Templates</h4>
+                                <p>Choose from industry-specific templates to jumpstart your chatbot</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Dedicated Support</h4>
+                                <p>Get help from our team whenever you need it during your trial</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>No Credit Card Required</h4>
+                                <p>Start your trial without any payment information</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="testimonial-mini">
                         <div class="testimonial-content">
-                            <p>"Setting up Chatterly was incredibly easy. We were up and running in less than an hour, and saw results almost immediately."</p>
+                            <p>"Setting up Chatterly was incredibly easy. We were up and running in less than an hour and saw results on day one."</p>
                         </div>
                         <div class="testimonial-author">
                             <div class="author-image">
-                                <img src="images/testimonial-1.jpg" alt="Sarah Johnson">
+                                <img src="images/testimonials/michael_chen.png" alt="Michael Chen">
                             </div>
                             <div class="author-info">
-                                <h4>Sarah Johnson</h4>
-                                <p>Marketing Director, TechSolutions Inc.</p>
+                                <h4>Michael Chen</h4>
+                                <p>CEO, GrowthWave</p>
                             </div>
-                        </div>
-                    </div>
-                    <div class="guarantee-card">
-                        <div class="guarantee-icon">
-                            <i class="fas fa-shield-check"></i>
-                        </div>
-                        <div class="guarantee-content">
-                            <h4>30-Day Money-Back Guarantee</h4>
-                            <p>If you're not completely satisfied within the first 30 days after your trial, we'll refund your payment in full.</p>
                         </div>
                     </div>
                 </div>
@@ -241,27 +164,53 @@
         </div>
     </section>
 
-    <section class="faq-section bg-light">
+    <section class="faq-section">
         <div class="container">
             <div class="section-header">
                 <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about your free trial</p>
             </div>
             <div class="faq-grid">
                 <div class="faq-item">
-                    <h3>Do I need a credit card to sign up?</h3>
-                    <p>No, you don't need a credit card to start your 14-day free trial. We'll only ask for payment details when you decide to continue after the trial period.</p>
+                    <h3>How long is the free trial?</h3>
+                    <p>Your free trial lasts for 14 days from the moment you sign up. You'll have full access to all features during this period.</p>
                 </div>
                 <div class="faq-item">
-                    <h3>What happens after my trial ends?</h3>
-                    <p>After your 14-day trial, you can choose to subscribe to your selected plan. If you don't subscribe, your account will be limited but you won't lose any data.</p>
+                    <h3>Do I need a credit card to sign up?</h3>
+                    <p>No, you don't need to provide any payment information to start your free trial. We'll only ask for payment details if you decide to continue after the trial ends.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What happens when my trial ends?</h3>
+                    <p>At the end of your 14-day trial, you can choose to subscribe to one of our plans to continue using Chatterly. If you don't subscribe, your account will be paused, but your data will be saved for 30 days.</p>
                 </div>
                 <div class="faq-item">
                     <h3>Can I change plans during my trial?</h3>
                     <p>Yes, you can switch between plans at any time during your trial to find the one that best fits your needs.</p>
                 </div>
                 <div class="faq-item">
-                    <h3>How long does it take to set up?</h3>
-                    <p>Most users are able to set up their first chatbot within 30 minutes. Our templates and intuitive interface make it quick and easy to get started.</p>
+                    <h3>Is there a limit to how many conversations I can have?</h3>
+                    <p>During your trial, you'll have access to the conversation limits of the plan you selected. You can view these limits on our pricing page.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you offer support during the trial?</h3>
+                    <p>Absolutely! You'll have access to our customer support team throughout your trial period. We're here to help you get the most out of Chatterly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Have Questions Before Starting?</h2>
+                <p>Our team is ready to help you make the most of your Chatterly experience.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary btn-large">Contact Sales</a>
+                    <a href="#" class="btn btn-outline btn-large">Schedule a Demo</a>
+                </div>
+                <div class="cta-guarantee">
+                    <i class="fas fa-shield-check"></i>
+                    <p>30-day money-back guarantee after your trial. No questions asked.</p>
                 </div>
             </div>
         </div>
@@ -272,13 +221,15 @@
             <div class="footer-main">
                 <div class="footer-col">
                     <div class="footer-logo">
-                        <span class="logo-text">Chatterly</span>
+                        <a href="index.html">
+                            <span class="logo-text">Chatterly</span>
+                        </a>
                     </div>
                     <p>Smart. Friendly. Automated Conversations That Close.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
@@ -288,7 +239,7 @@
                         <li><a href="features.html">Features</a></li>
                         <li><a href="pricing.html">Pricing</a></li>
                         <li><a href="solutions.html">Solutions</a></li>
-                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="trial-signup.html">Free Trial</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -298,12 +249,13 @@
                         <li><a href="contact.html">Contact</a></li>
                         <li><a href="privacy.html">Privacy Policy</a></li>
                         <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="resources.html#blog">Blog</a></li>
                         <li><a href="resources.html#guides">Guides</a></li>
                         <li><a href="resources.html#templates">Templates</a></li>
                         <li><a href="resources.html#webinars">Webinars</a></li>
@@ -311,11 +263,11 @@
                 </div>
                 <div class="footer-col">
                     <h4>Subscribe</h4>
-                    <p>Get the latest updates and tips</p>
-                    <form class="footer-subscribe">
+                    <p>Get the latest updates and tips for improving your customer conversations.</p>
+                    <div class="footer-subscribe">
                         <input type="email" placeholder="Your email">
-                        <button type="submit" class="btn btn-primary">Subscribe</button>
-                    </form>
+                        <button>Subscribe</button>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -325,145 +277,8 @@
     </footer>
 
     <script src="js/main.js"></script>
-    <script>
-        // Trial signup form multi-step functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const form = document.getElementById('trial-signup-form');
-            const steps = form.querySelectorAll('.form-step');
-            const nextButtons = form.querySelectorAll('.next-step');
-            const prevButtons = form.querySelectorAll('.prev-step');
-            
-            // Next step buttons
-            nextButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const currentStep = this.closest('.form-step');
-                    const currentStepIndex = Array.from(steps).indexOf(currentStep);
-                    
-                    // Validate current step
-                    const inputs = currentStep.querySelectorAll('input[required], select[required]');
-                    let isValid = true;
-                    
-                    inputs.forEach(input => {
-                        if (!input.value.trim()) {
-                            isValid = false;
-                            input.classList.add('error');
-                        } else {
-                            input.classList.remove('error');
-                        }
-                    });
-                    
-                    if (isValid) {
-                        // Hide current step
-                        currentStep.classList.remove('active');
-                        
-                        // Show next step
-                        steps[currentStepIndex + 1].classList.add('active');
-                        
-                        // Track form progress for analytics
-                        if (typeof trackFormProgress === 'function') {
-                            trackFormProgress(currentStepIndex + 1);
-                        }
-                    } else {
-                        // Show error message
-                        const errorMessage = document.createElement('div');
-                        errorMessage.className = 'error-message';
-                        errorMessage.textContent = 'Please fill out all required fields.';
-                        
-                        // Remove any existing error messages
-                        const existingError = currentStep.querySelector('.error-message');
-                        if (existingError) {
-                            existingError.remove();
-                        }
-                        
-                        currentStep.prepend(errorMessage);
-                    }
-                });
-            });
-            
-            // Previous step buttons
-            prevButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const currentStep = this.closest('.form-step');
-                    const currentStepIndex = Array.from(steps).indexOf(currentStep);
-                    
-                    // Hide current step
-                    currentStep.classList.remove('active');
-                    
-                    // Show previous step
-                    steps[currentStepIndex - 1].classList.add('active');
-                });
-            });
-            
-            // Form submission
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Validate final step
-                const finalStep = form.querySelector('.form-step:last-child');
-                const termsCheckbox = finalStep.querySelector('input[name="terms"]');
-                
-                if (!termsCheckbox.checked) {
-                    const errorMessage = document.createElement('div');
-                    errorMessage.className = 'error-message';
-                    errorMessage.textContent = 'You must agree to the Terms of Service and Privacy Policy.';
-                    
-                    // Remove any existing error messages
-                    const existingError = finalStep.querySelector('.error-message');
-                    if (existingError) {
-                        existingError.remove();
-                    }
-                    
-                    finalStep.prepend(errorMessage);
-                    return;
-                }
-                
-                // Collect form data
-                const formData = new FormData(form);
-                const formDataObj = {};
-                
-                formData.forEach((value, key) => {
-                    if (formDataObj[key]) {
-                        if (!Array.isArray(formDataObj[key])) {
-                            formDataObj[key] = [formDataObj[key]];
-                        }
-                        formDataObj[key].push(value);
-                    } else {
-                        formDataObj[key] = value;
-                    }
-                });
-                
-                // Submit to HubSpot (placeholder for actual integration)
-                console.log('Submitting to HubSpot:', formDataObj);
-                
-                // Show success message
-                form.innerHTML = `
-                    <div class="success-message">
-                        <div class="success-icon">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                        <h2>Thank You for Signing Up!</h2>
-                        <p>Your 14-day free trial has been activated. Check your email for login details and next steps.</p>
-                        <div class="success-actions">
-                            <a href="#" class="btn btn-primary">Set Up Your First Chatbot</a>
-                        </div>
-                    </div>
-                `;
-                
-                // Track conversion for analytics
-                if (typeof trackConversion === 'function') {
-                    trackConversion('trial_signup', formDataObj.plan);
-                }
-            });
-            
-            // Placeholder for tracking functions (to be replaced with actual integrations)
-            function trackFormProgress(step) {
-                console.log('Form progress:', step);
-            }
-            
-            function trackConversion(type, plan) {
-                console.log('Conversion:', type, plan);
-            }
-        });
-    </script>
+    <script src="js/form-handler.js"></script>
+    <script src="js/hubspot-integration.js"></script>
+    <script src="js/analytics.js"></script>
 </body>
 </html>
