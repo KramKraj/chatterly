@@ -4,8 +4,8 @@
 
 // Google Analytics 4 implementation
 (function() {
-  // Replace with actual measurement ID
-  const measurementId = 'G-XXXXXXXXXX';
+  // Actual measurement ID
+  const measurementId = 'G-F5JX8CMCBH';
   
   // Load Google Analytics script
   const script = document.createElement('script');
