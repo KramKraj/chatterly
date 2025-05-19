@@ -1,311 +1,204 @@
-// Main JavaScript for Chatterly website
+// Main JavaScript for Chatterly
+// Version: 1.0.0
+// Author: Chatterly Development Team
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize mobile menu toggle
-    initMobileMenu();
+    // Mobile menu toggle
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
     
-    // Initialize pricing toggle
-    initPricingToggle();
-    
-    // Initialize smooth scrolling for anchor links
-    initSmoothScroll();
-    
-    // Initialize testimonial slider
-    initTestimonialSlider();
-    
-    // Initialize resource category tabs
-    initResourceTabs();
-    
-    // Mobile menu toggle functionality
-    function initMobileMenu() {
-        const menuToggle = document.querySelector('.mobile-menu-toggle');
-        const mainNav = document.querySelector('.main-nav');
-        
-        if (menuToggle && mainNav) {
-            menuToggle.addEventListener('click', function() {
-                mainNav.classList.toggle('active');
-                menuToggle.classList.toggle('active');
-                
-                // Track menu toggle in analytics
-                if (typeof window.trackEvent === 'function') {
-                    window.trackEvent('mobile_menu_toggle', {
-                        state: mainNav.classList.contains('active') ? 'open' : 'closed'
-                    });
-                }
-            });
-            
-            // Close menu when clicking outside
-            document.addEventListener('click', function(e) {
-                if (!menuToggle.contains(e.target) && !mainNav.contains(e.target) && mainNav.classList.contains('active')) {
-                    mainNav.classList.remove('active');
-                    menuToggle.classList.remove('active');
-                }
-            });
-        }
+    if (mobileMenuToggle && mainNav) {
+        mobileMenuToggle.addEventListener('click', function() {
+            mainNav.classList.toggle('active');
+            const icon = mobileMenuToggle.querySelector('i');
+            if (icon) {
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            }
+        });
     }
     
-    // Pricing toggle functionality
-    function initPricingToggle() {
-        const pricingToggle = document.getElementById('pricing-toggle');
-        const monthlyPrices = document.querySelectorAll('.price-monthly');
-        const annualPrices = document.querySelectorAll('.price-annual');
-        const monthlyLabel = document.querySelector('.toggle-monthly');
-        const annualLabel = document.querySelector('.toggle-annual');
-        
-        if (pricingToggle) {
-            // Set initial state
-            updatePricingDisplay();
-            
-            // Handle toggle change
-            pricingToggle.addEventListener('change', function() {
-                updatePricingDisplay();
-                
-                // Track pricing toggle in analytics
-                if (typeof window.trackEvent === 'function') {
-                    window.trackEvent('pricing_toggle', {
-                        billing_period: pricingToggle.checked ? 'annual' : 'monthly'
-                    });
-                }
-            });
-            
-            // Handle label clicks
-            if (monthlyLabel) {
-                monthlyLabel.addEventListener('click', function() {
-                    pricingToggle.checked = false;
-                    updatePricingDisplay();
-                });
-            }
-            
-            if (annualLabel) {
-                annualLabel.addEventListener('click', function() {
-                    pricingToggle.checked = true;
-                    updatePricingDisplay();
-                });
-            }
-            
-            // Update pricing display based on toggle state
-            function updatePricingDisplay() {
-                const isAnnual = pricingToggle.checked;
-                
-                // Update active label
-                if (monthlyLabel && annualLabel) {
-                    monthlyLabel.classList.toggle('active', !isAnnual);
-                    annualLabel.classList.toggle('active', isAnnual);
-                }
-                
-                // Update visible prices
-                monthlyPrices.forEach(price => {
-                    price.style.display = isAnnual ? 'none' : 'block';
-                });
-                
-                annualPrices.forEach(price => {
-                    price.style.display = isAnnual ? 'block' : 'none';
-                });
-                
-                // Update savings badges
-                const savingsBadges = document.querySelectorAll('.savings-badge');
-                savingsBadges.forEach(badge => {
-                    badge.style.display = isAnnual ? 'block' : 'none';
-                });
-            }
-        }
-    }
+    // Pricing toggle
+    const pricingToggle = document.getElementById('pricing-toggle');
+    const pricingAmounts = document.querySelectorAll('.pricing-amount');
+    const monthlyPrices = ['$19', '$49', '$99'];
+    const annualPrices = ['$15', '$39', '$79'];
     
-    // Smooth scrolling for anchor links
-    function initSmoothScroll() {
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const targetId = this.getAttribute('href');
-                
-                if (targetId !== '#') {
-                    e.preventDefault();
-                    
-                    const targetElement = document.querySelector(targetId);
-                    
-                    if (targetElement) {
-                        // Get header height for offset
-                        const headerHeight = document.querySelector('header').offsetHeight;
-                        
-                        // Calculate position
-                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-                        
-                        // Smooth scroll
-                        window.scrollTo({
-                            top: targetPosition,
-                            behavior: 'smooth'
-                        });
-                        
-                        // Track scroll event in analytics
-                        if (typeof window.trackEvent === 'function') {
-                            window.trackEvent('anchor_click', {
-                                target: targetId
-                            });
-                        }
-                    }
+    if (pricingToggle && pricingAmounts.length > 0) {
+        pricingToggle.addEventListener('change', function() {
+            pricingAmounts.forEach((amount, index) => {
+                if (this.checked) {
+                    // Annual pricing
+                    amount.innerHTML = annualPrices[index] + ' <span class="pricing-period">/month</span>';
+                } else {
+                    // Monthly pricing
+                    amount.innerHTML = monthlyPrices[index] + ' <span class="pricing-period">/month</span>';
                 }
             });
         });
     }
     
-    // Testimonial slider functionality
-    function initTestimonialSlider() {
-        const testimonialSlider = document.querySelector('.testimonial-slider');
-        
-        if (testimonialSlider) {
-            let isDown = false;
-            let startX;
-            let scrollLeft;
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
             
-            // Mouse events for desktop
-            testimonialSlider.addEventListener('mousedown', (e) => {
-                isDown = true;
-                testimonialSlider.classList.add('active');
-                startX = e.pageX - testimonialSlider.offsetLeft;
-                scrollLeft = testimonialSlider.scrollLeft;
-            });
+            if (targetId === '#') return;
             
-            testimonialSlider.addEventListener('mouseleave', () => {
-                isDown = false;
-                testimonialSlider.classList.remove('active');
-            });
+            const targetElement = document.querySelector(targetId);
             
-            testimonialSlider.addEventListener('mouseup', () => {
-                isDown = false;
-                testimonialSlider.classList.remove('active');
-            });
-            
-            testimonialSlider.addEventListener('mousemove', (e) => {
-                if (!isDown) return;
+            if (targetElement) {
                 e.preventDefault();
-                const x = e.pageX - testimonialSlider.offsetLeft;
-                const walk = (x - startX) * 2; // Scroll speed
-                testimonialSlider.scrollLeft = scrollLeft - walk;
-            });
-            
-            // Touch events for mobile
-            testimonialSlider.addEventListener('touchstart', (e) => {
-                isDown = true;
-                testimonialSlider.classList.add('active');
-                startX = e.touches[0].pageX - testimonialSlider.offsetLeft;
-                scrollLeft = testimonialSlider.scrollLeft;
-            });
-            
-            testimonialSlider.addEventListener('touchend', () => {
-                isDown = false;
-                testimonialSlider.classList.remove('active');
-            });
-            
-            testimonialSlider.addEventListener('touchmove', (e) => {
-                if (!isDown) return;
-                const x = e.touches[0].pageX - testimonialSlider.offsetLeft;
-                const walk = (x - startX) * 2;
-                testimonialSlider.scrollLeft = scrollLeft - walk;
-            });
-        }
-    }
-    
-    // Resource category tabs functionality
-    function initResourceTabs() {
-        const categoryTabs = document.querySelectorAll('.category-tab');
-        const resourceSections = document.querySelectorAll('.resource-section');
-        
-        if (categoryTabs.length > 0 && resourceSections.length > 0) {
-            // Handle tab clicks
-            categoryTabs.forEach(tab => {
-                tab.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    // Get target section ID
-                    const targetId = this.getAttribute('href');
-                    
-                    // Update active tab
-                    categoryTabs.forEach(t => t.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    // Smooth scroll to section
-                    const targetSection = document.querySelector(targetId);
-                    
-                    if (targetSection) {
-                        // Get header and tabs height for offset
-                        const headerHeight = document.querySelector('header').offsetHeight;
-                        const tabsHeight = document.querySelector('.category-tabs').offsetHeight;
-                        
-                        // Calculate position
-                        const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - headerHeight - tabsHeight;
-                        
-                        // Smooth scroll
-                        window.scrollTo({
-                            top: targetPosition,
-                            behavior: 'smooth'
-                        });
-                        
-                        // Track tab click in analytics
-                        if (typeof window.trackEvent === 'function') {
-                            window.trackEvent('resource_tab_click', {
-                                tab: targetId.substring(1)
-                            });
-                        }
-                    }
+                window.scrollTo({
+                    top: targetElement.offsetTop - 100,
+                    behavior: 'smooth'
                 });
-            });
+            }
+        });
+    });
+    
+    // Set up button destinations
+    setupButtonDestinations();
+    
+    // Initialize testimonial slider
+    initTestimonialSlider();
+    
+    // Add active class to current page in navigation
+    highlightCurrentPage();
+});
+
+// Function to set up all button destinations
+function setupButtonDestinations() {
+    // Map of button text to destinations
+    const buttonDestinations = {
+        'Explore All Features': 'features.html',
+        'See Features': 'features.html',
+        'See More Success Stories': 'features.html#success-stories',
+        'View Full Pricing Details': 'pricing.html',
+        'Start Your Free Trial': 'trial-signup.html',
+        'Contact Sales': 'contact.html',
+        'Learn More': 'features.html'
+    };
+    
+    // Get all buttons and links
+    const buttons = document.querySelectorAll('.btn');
+    
+    buttons.forEach(button => {
+        const buttonText = button.textContent.trim();
+        
+        // If this button text has a defined destination and doesn't already have an href
+        if (buttonDestinations[buttonText] && (!button.hasAttribute('href') || button.getAttribute('href') === '#' || button.getAttribute('href') === '')) {
+            button.setAttribute('href', buttonDestinations[buttonText]);
+        }
+    });
+    
+    // Add IDs to sections for anchor links
+    const sections = {
+        'success-stories': document.querySelector('.success-stories'),
+        'roi': document.querySelector('.business-impact'),
+        'features': document.querySelector('.features-section'),
+        'pricing': document.querySelector('.pricing-section'),
+        'testimonials': document.querySelector('.testimonials'),
+        'how-it-works': document.querySelector('.how-it-works')
+    };
+    
+    // Add IDs to sections if they exist and don't already have an ID
+    for (const [id, section] of Object.entries(sections)) {
+        if (section && !section.id) {
+            section.id = id;
+        }
+    }
+}
+
+// Function to initialize testimonial slider
+function initTestimonialSlider() {
+    const slider = document.querySelector('.testimonial-slider');
+    
+    if (!slider) return;
+    
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+    
+    slider.addEventListener('mousedown', (e) => {
+        isDown = true;
+        slider.classList.add('active');
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+    });
+    
+    slider.addEventListener('mouseleave', () => {
+        isDown = false;
+        slider.classList.remove('active');
+    });
+    
+    slider.addEventListener('mouseup', () => {
+        isDown = false;
+        slider.classList.remove('active');
+    });
+    
+    slider.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 2; // Scroll speed
+        slider.scrollLeft = scrollLeft - walk;
+    });
+    
+    // Auto scroll for testimonials
+    let scrollInterval;
+    
+    function startAutoScroll() {
+        scrollInterval = setInterval(() => {
+            slider.scrollLeft += 2;
             
-            // Set active tab based on scroll position
-            window.addEventListener('scroll', function() {
-                // Get current scroll position
-                const scrollPosition = window.scrollY + window.innerHeight / 3;
-                
-                // Find current section
-                let currentSection = null;
-                
-                resourceSections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.offsetHeight;
-                    
-                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                        currentSection = section;
-                    }
-                });
-                
-                // Update active tab
-                if (currentSection) {
-                    const currentId = '#' + currentSection.id;
-                    
-                    categoryTabs.forEach(tab => {
-                        if (tab.getAttribute('href') === currentId) {
-                            tab.classList.add('active');
-                        } else {
-                            tab.classList.remove('active');
-                        }
-                    });
-                }
-            });
-        }
+            // Reset scroll position when reaching the end
+            if (slider.scrollLeft >= (slider.scrollWidth - slider.clientWidth)) {
+                slider.scrollLeft = 0;
+            }
+        }, 30);
     }
     
-    // Add animation on scroll
-    const animatedElements = document.querySelectorAll('.feature-card, .step, .competitive-card, .pricing-card, .testimonial, .resource-card');
-    
-    if (animatedElements.length > 0) {
-        // Check if element is in viewport
-        function isInViewport(element) {
-            const rect = element.getBoundingClientRect();
-            return (
-                rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.85
-            );
-        }
-        
-        // Add animation class when element is in viewport
-        function animateOnScroll() {
-            animatedElements.forEach(element => {
-                if (isInViewport(element) && !element.classList.contains('animated')) {
-                    element.classList.add('animated');
-                }
-            });
-        }
-        
-        // Run on scroll
-        window.addEventListener('scroll', animateOnScroll);
-        
-        // Run on page load
-        animateOnScroll();
+    function stopAutoScroll() {
+        clearInterval(scrollInterval);
     }
+    
+    // Start auto scroll
+    startAutoScroll();
+    
+    // Pause auto scroll on hover
+    slider.addEventListener('mouseenter', stopAutoScroll);
+    slider.addEventListener('mouseleave', startAutoScroll);
+}
+
+// Function to highlight current page in navigation
+function highlightCurrentPage() {
+    const currentPage = window.location.pathname.split('/').pop();
+    const navLinks = document.querySelectorAll('.main-nav a');
+    
+    navLinks.forEach(link => {
+        const linkHref = link.getAttribute('href');
+        
+        if (linkHref === currentPage || 
+            (currentPage === '' && linkHref === 'index.html') || 
+            (currentPage === '/' && linkHref === 'index.html')) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+}
+
+// Add scroll animations
+window.addEventListener('scroll', function() {
+    const elements = document.querySelectorAll('.feature-card, .benefit-card, .step, .testimonial, .pricing-card');
+    
+    elements.forEach(element => {
+        const position = element.getBoundingClientRect();
+        
+        // If element is in viewport
+        if (position.top < window.innerHeight && position.bottom >= 0) {
+            element.classList.add('visible');
+        }
+    });
 });
