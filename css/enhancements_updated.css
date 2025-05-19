@@ -1,0 +1,553 @@
+/* 
+Additional styles for visual enhancements - Updated version
+Version: 2.0.0
+Author: Chatterly Design Team
+*/
+
+/* Logo Adjustments */
+.logo img {
+    height: auto;
+    width: 180px;
+    max-width: 100%;
+}
+
+.footer-logo img {
+    height: auto;
+    width: 150px;
+    max-width: 100%;
+}
+
+/* Font Size Adjustments */
+.smaller-heading {
+    font-size: 90% !important;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+}
+
+.smaller-text {
+    font-size: 90% !important;
+    line-height: 1.5;
+}
+
+/* Hero Section Adjustments */
+.hero-section {
+    padding: 3rem 0 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section .container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.business-image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.chatbot-image {
+    flex: 0 0 auto;
+    width: 280px;
+}
+
+.business-meeting-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.chatbot-interface-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Pricing Section Adjustments */
+.pricing-toggle-container {
+    display: none; /* Hide the toggle as requested */
+}
+
+.pricing-horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.pricing-horizontal .pricing-card {
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+}
+
+.pricing-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-features {
+    flex-grow: 1;
+}
+
+/* Enhanced Button Styles */
+.btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary:hover {
+    background-color: #e05e05;
+}
+
+.btn-secondary:hover {
+    background-color: #1a56db;
+}
+
+.btn-outline:hover {
+    background-color: rgba(30, 58, 138, 0.1);
+}
+
+/* Animated Elements */
+.feature-card, .benefit-card, .step, .testimonial, .pricing-card {
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover, .benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.feature-icon, .benefit-icon {
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover .feature-icon, .benefit-card:hover .benefit-icon {
+    transform: scale(1.1);
+}
+
+/* Business Impact Section */
+.business-impact {
+    padding: 4rem 0;
+    background-color: var(--silver);
+}
+
+.impact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.impact-image img {
+    max-width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.impact-text h3 {
+    margin-bottom: 1rem;
+}
+
+.impact-text p {
+    margin-bottom: 1.5rem;
+}
+
+/* Success Stories Section */
+.success-stories {
+    padding: 4rem 0;
+}
+
+.success-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.success-image img {
+    max-width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.success-text h3 {
+    margin-bottom: 1rem;
+}
+
+.success-quote {
+    background-color: var(--silver);
+    border-left: 4px solid var(--orange);
+    padding: 1.5rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+    margin-top: 1.5rem;
+}
+
+.success-quote p {
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.quote-author {
+    font-weight: 600;
+    text-align: right;
+}
+
+/* Benefits Section */
+.benefits-section {
+    padding: 4rem 0;
+    background-color: var(--silver);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.benefit-card {
+    background-color: var(--white);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.benefit-icon {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(30, 58, 138, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.benefit-icon i {
+    font-size: 1.5rem;
+    color: var(--royal-blue);
+}
+
+/* Business Owner Section */
+.business-owner {
+    padding: 4rem 0;
+}
+
+.owner-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.owner-image img {
+    max-width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.owner-text h2 {
+    margin-bottom: 1rem;
+}
+
+.owner-text p {
+    margin-bottom: 1.5rem;
+}
+
+.owner-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+}
+
+.owner-benefits li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.owner-benefits i {
+    color: var(--orange);
+    margin-right: 0.75rem;
+    margin-top: 0.25rem;
+}
+
+/* Step Images */
+.step-image {
+    margin-top: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Pricing Comparison */
+.pricing-comparison {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.comparison-chart {
+    max-width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced Testimonials */
+.testimonial {
+    transition: all 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .impact-content, .success-content, .owner-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .impact-image, .success-image, .owner-image {
+        text-align: center;
+    }
+    
+    .hero-section .container {
+        flex-direction: column;
+    }
+    
+    .hero-content {
+        text-align: center;
+    }
+    
+    .hero-images {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .pricing-horizontal {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .pricing-horizontal .pricing-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+/* Google Analytics Integration */
+.analytics-notice {
+    background-color: var(--silver);
+    padding: 0.5rem 1rem;
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+.analytics-notice a {
+    text-decoration: underline;
+}
+
+/* Video Container */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Favicon */
+.favicon-link {
+    display: inline-block;
+}
+
+/* Resources Page Blog Images */
+.blog-card-image {
+    height: 160px; /* Reduced height */
+    overflow: hidden;
+}
+
+.blog-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover .blog-card-image img {
+    transform: scale(1.05);
+}
+
+/* Section Spacing Adjustments */
+section {
+    padding: 3rem 0; /* Reduced padding */
+}
+
+.section-header {
+    margin-bottom: 2rem; /* Reduced margin */
+}
+
+/* Content Density Improvements */
+.container {
+    max-width: 1200px;
+    padding: 0 1.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.features-grid, .benefits-grid {
+    gap: 1.5rem; /* Reduced gap */
+}
+
+.feature-card, .benefit-card {
+    padding: 1.5rem; /* Reduced padding */
+}
+
+/* HubSpot Integration Styles */
+.hubspot-form {
+    margin: 2rem 0;
+}
+
+.hubspot-form iframe {
+    width: 100%;
+    border: none;
+}
+
+/* Stripe Integration Styles */
+.stripe-button {
+    background-color: #635BFF;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.stripe-button:hover {
+    background-color: #524DDB;
+}
+
+/* Integration Documentation Styles */
+.integration-docs {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+.integration-docs h3 {
+    margin-bottom: 1rem;
+}
+
+.integration-docs pre {
+    background-color: #272822;
+    color: #f8f8f2;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+.integration-docs code {
+    font-family: monospace;
+}
+
+/* About Page Team Section */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 2rem;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+}
+
+.team-member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    margin-bottom: 0.25rem;
+}
+
+.team-member p {
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+}
+
+.team-member-social {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.team-member-social a {
+    color: var(--royal-blue);
+    font-size: 1.25rem;
+}

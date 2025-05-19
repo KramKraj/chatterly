@@ -1,0 +1,311 @@
+/* 
+Additional styles for visual enhancements
+Version: 1.0.0
+Author: Chatterly Design Team
+*/
+
+/* Enhanced Button Styles */
+.btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary:hover {
+    background-color: #e05e05;
+}
+
+.btn-secondary:hover {
+    background-color: #1a56db;
+}
+
+.btn-outline:hover {
+    background-color: rgba(30, 58, 138, 0.1);
+}
+
+/* Animated Elements */
+.feature-card, .benefit-card, .step, .testimonial, .pricing-card {
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover, .benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.feature-icon, .benefit-icon {
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover .feature-icon, .benefit-card:hover .benefit-icon {
+    transform: scale(1.1);
+}
+
+/* Enhanced Hero Section */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.1), transparent 70%);
+    z-index: 0;
+}
+
+.hero-content, .hero-image {
+    position: relative;
+    z-index: 1;
+}
+
+/* Business Impact Section */
+.business-impact {
+    padding: 5rem 0;
+    background-color: var(--silver);
+}
+
+.impact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.impact-image img {
+    max-width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.impact-text h3 {
+    margin-bottom: 1rem;
+}
+
+.impact-text p {
+    margin-bottom: 1.5rem;
+}
+
+/* Success Stories Section */
+.success-stories {
+    padding: 5rem 0;
+}
+
+.success-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.success-image img {
+    max-width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.success-text h3 {
+    margin-bottom: 1rem;
+}
+
+.success-quote {
+    background-color: var(--silver);
+    border-left: 4px solid var(--orange);
+    padding: 1.5rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+    margin-top: 1.5rem;
+}
+
+.success-quote p {
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.quote-author {
+    font-weight: 600;
+    text-align: right;
+}
+
+/* Benefits Section */
+.benefits-section {
+    padding: 5rem 0;
+    background-color: var(--silver);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.benefit-card {
+    background-color: var(--white);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.benefit-icon {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(30, 58, 138, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.benefit-icon i {
+    font-size: 1.5rem;
+    color: var(--royal-blue);
+}
+
+/* Business Owner Section */
+.business-owner {
+    padding: 5rem 0;
+}
+
+.owner-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.owner-image img {
+    max-width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.owner-text h2 {
+    margin-bottom: 1rem;
+}
+
+.owner-text p {
+    margin-bottom: 1.5rem;
+}
+
+.owner-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+}
+
+.owner-benefits li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.owner-benefits i {
+    color: var(--orange);
+    margin-right: 0.75rem;
+    margin-top: 0.25rem;
+}
+
+/* Step Images */
+.step-image {
+    margin-top: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Pricing Comparison */
+.pricing-comparison {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.comparison-chart {
+    max-width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced Testimonials */
+.testimonial {
+    transition: all 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .impact-content, .success-content, .owner-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .impact-image, .success-image, .owner-image {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Google Analytics Integration */
+.analytics-notice {
+    background-color: var(--silver);
+    padding: 0.5rem 1rem;
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+.analytics-notice a {
+    text-decoration: underline;
+}
+
+/* Video Container */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Favicon */
+.favicon-link {
+    display: inline-block;
+}
+
+/* Logo Adjustments */
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.footer-logo img {
+    height: auto;
+    width: 150px;
+}
