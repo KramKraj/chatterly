@@ -1,0 +1,16 @@
+// Vercel Deployment Configuration for Chatterly
+
+{
+  "name": "chatterly",
+  "version": "1.0.0",
+  "description": "Chatterly - Smart. Friendly. Automated Conversations That Close.",
+  "scripts": {
+    "start": "serve -s ."
+  },
+  "dependencies": {
+    "serve": "^14.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

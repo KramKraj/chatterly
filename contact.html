@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Chatterly</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-text">Chatterly</span>
+                </a>
+            </div>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+            </nav>
+            <div class="cta-button">
+                <a href="trial-signup.html" class="btn btn-primary">Start Free Trial</a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1>Contact Us</h1>
+                <p>We'd love to hear from you. Get in touch with our team.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-options">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Customer Support</h3>
+                    <p>Need help with your Chatterly account or have technical questions?</p>
+                    <a href="mailto:support@chatterly.ai" class="contact-link">support@chatterly.ai</a>
+                    <p class="contact-note">Response time: Within 2 hours during business hours</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Sales Inquiries</h3>
+                    <p>Interested in Chatterly for your business or have questions about pricing?</p>
+                    <a href="mailto:sales@chatterly.ai" class="contact-link">sales@chatterly.ai</a>
+                    <p class="contact-note">Response time: Within 1 business day</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Partnerships</h3>
+                    <p>Interested in partnering with Chatterly or exploring integration opportunities?</p>
+                    <a href="mailto:partnerships@chatterly.ai" class="contact-link">partnerships@chatterly.ai</a>
+                    <p class="contact-note">Response time: Within 2 business days</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <h3>Media Inquiries</h3>
+                    <p>Journalist or media professional looking to cover Chatterly?</p>
+                    <a href="mailto:press@chatterly.ai" class="contact-link">press@chatterly.ai</a>
+                    <p class="contact-note">Response time: Within 2 business days</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-form-section bg-light">
+        <div class="container">
+            <div class="contact-form-container">
+                <div class="contact-form-header">
+                    <h2>Send Us a Message</h2>
+                    <p>Fill out the form below and we'll get back to you as soon as possible.</p>
+                </div>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name*</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name*</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address*</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company Name*</label>
+                        <input type="text" id="company" name="company" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject*</label>
+                        <select id="subject" name="subject" required>
+                            <option value="" disabled selected>Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="sales">Sales Question</option>
+                            <option value="support">Technical Support</option>
+                            <option value="partnership">Partnership Opportunity</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message*</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="subscribe" name="subscribe">
+                        <label for="subscribe">Subscribe to our newsletter for tips, updates, and industry insights</label>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="privacy" name="privacy" required>
+                        <label for="privacy">I agree to the <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms of Service</a>*</label>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-locations">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Locations</h2>
+                <p>Visit us at one of our offices</p>
+            </div>
+            <div class="locations-grid">
+                <div class="location-card">
+                    <div class="location-image">
+                        <img src="images/location-sf.jpg" alt="San Francisco Office">
+                    </div>
+                    <h3>San Francisco</h3>
+                    <p class="location-address">
+                        123 Market Street<br>
+                        Suite 400<br>
+                        San Francisco, CA 94105
+                    </p>
+                    <p class="location-phone">+1 (415) 555-1234</p>
+                </div>
+                <div class="location-card">
+                    <div class="location-image">
+                        <img src="images/location-ny.jpg" alt="New York Office">
+                    </div>
+                    <h3>New York</h3>
+                    <p class="location-address">
+                        456 Madison Avenue<br>
+                        15th Floor<br>
+                        New York, NY 10022
+                    </p>
+                    <p class="location-phone">+1 (212) 555-5678</p>
+                </div>
+                <div class="location-card">
+                    <div class="location-image">
+                        <img src="images/location-london.jpg" alt="London Office">
+                    </div>
+                    <h3>London</h3>
+                    <p class="location-address">
+                        78 Chancery Lane<br>
+                        3rd Floor<br>
+                        London, WC2A 1AA
+                    </p>
+                    <p class="location-phone">+44 20 7123 4567</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-faq bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Quick answers to common questions</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How quickly can I get started with Chatterly?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can get started with Chatterly in minutes. Simply sign up for a free trial, select a template for your industry, customize it to match your brand, and add it to your website with a simple code snippet.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do I need technical skills to use Chatterly?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No technical skills required! Chatterly is designed to be user-friendly for everyone. Our intuitive interface makes it easy to create, customize, and deploy chatbots without any coding knowledge.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I integrate Chatterly with my existing tools?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! Chatterly integrates with popular CRM systems, email marketing platforms, and other business tools. Check our <a href="features.html#integrations">integrations page</a> for a complete list of supported platforms.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What kind of support do you offer?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>All Chatterly plans include email support with fast response times. Our Professional and Enterprise plans also include priority support and dedicated account management. We're committed to your success!</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I cancel my subscription at any time?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you can cancel your subscription at any time. We also offer a 30-day money-back guarantee, so you can try Chatterly risk-free.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-more">
+                <p>Have more questions? Check our <a href="resources.html#faq">complete FAQ</a> or <a href="#contactForm">contact us</a>.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Customer Conversations?</h2>
+                <p>Try Chatterly free for 14 days. No credit card required.</p>
+                <div class="cta-buttons">
+                    <a href="trial-signup.html" class="btn btn-primary btn-large">Start Your Free Trial</a>
+                    <a href="#" class="btn btn-outline btn-large">Schedule a Demo</a>
+                </div>
+                <div class="cta-guarantee">
+                    <i class="fas fa-shield-check"></i>
+                    <p>30-day money-back guarantee. No questions asked.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-text">Chatterly</span>
+                    </div>
+                    <p>Smart. Friendly. Automated Conversations That Close.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="solutions.html">Solutions</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="resources.html#guides">Guides</a></li>
+                        <li><a href="resources.html#templates">Templates</a></li>
+                        <li><a href="resources.html#webinars">Webinars</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Subscribe</h4>
+                    <p>Get the latest updates and tips</p>
+                    <form class="footer-subscribe">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Chatterly. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // FAQ toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+                const toggle = item.querySelector('.faq-toggle');
+                
+                question.addEventListener('click', function() {
+                    // Close all other answers
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                            otherItem.querySelector('.faq-answer').style.maxHeight = null;
+                            otherItem.querySelector('.faq-toggle i').className = 'fas fa-plus';
+                        }
+                    });
+                    
+                    // Toggle current answer
+                    item.classList.toggle('active');
+                    
+                    if (item.classList.contains('active')) {
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        toggle.querySelector('i').className = 'fas fa-minus';
+                    } else {
+                        answer.style.maxHeight = null;
+                        toggle.querySelector('i').className = 'fas fa-plus';
+                    }
+                });
+            });
+        });
+        
+        // Form submission with HubSpot integration
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Collect form data
+            const formData = {
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                company: document.getElementById('company').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value,
+                subscribe: document.getElementById('subscribe').checked
+            };
+            
+            // Here we would normally send the data to HubSpot
+            // For now, we'll just show a success message
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
