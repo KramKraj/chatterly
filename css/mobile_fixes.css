@@ -1,0 +1,118 @@
+/* Mobile menu and button fixes */
+
+/* Mobile menu enhancements */
+@media (max-width: 992px) {
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        padding: 1rem 0;
+        z-index: 100;
+    }
+    
+    .main-nav.active {
+        display: block;
+    }
+    
+    .main-nav li {
+        display: block;
+        margin: 0;
+        text-align: center;
+    }
+    
+    .main-nav li a {
+        display: block;
+        padding: 0.75rem 1.5rem;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: var(--royal-blue);
+        color: var(--white);
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+        font-size: 1.25rem;
+    }
+    
+    .mobile-menu-toggle:hover {
+        background-color: var(--medium-blue);
+    }
+}
+
+/* Button contrast fixes for all backgrounds */
+.btn-outline {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: var(--royal-blue);
+    border: 2px solid var(--white);
+    font-weight: 600;
+    text-shadow: none;
+}
+
+.btn-outline:hover {
+    background-color: var(--white);
+    color: var(--royal-blue);
+    border-color: var(--white);
+}
+
+/* Specific fix for buttons on blue backgrounds */
+.hero-section .btn-outline,
+.cta-section .btn-outline,
+section.blue-bg .btn-outline {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: var(--royal-blue);
+    border: 2px solid var(--white);
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.hero-section .btn-outline:hover,
+.cta-section .btn-outline:hover,
+section.blue-bg .btn-outline:hover {
+    background-color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Compare Features button specific fix */
+.btn-compare-features {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: var(--royal-blue);
+    border: 2px solid var(--white);
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-compare-features:hover {
+    background-color: var(--white);
+    color: var(--royal-blue);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Tab button fixes for mobile */
+@media (max-width: 768px) {
+    .tabs {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .tab-btn {
+        margin-bottom: 0.5rem;
+        width: calc(50% - 0.5rem);
+        text-align: center;
+    }
+}

@@ -1,0 +1,84 @@
+/* Promotional offer styles */
+.promo-banner {
+    background-color: var(--orange);
+    color: var(--white);
+    text-align: center;
+    padding: 0.75rem 1rem;
+    position: relative;
+    z-index: 101;
+    font-weight: 600;
+}
+
+.promo-banner p {
+    margin: 0;
+}
+
+.promo-highlight {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    margin: 0 0.25rem;
+}
+
+.promo-section {
+    background-color: rgba(249, 115, 22, 0.1);
+    border: 2px solid var(--orange);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.promo-section h3 {
+    color: var(--royal-blue);
+    margin-bottom: 0.75rem;
+}
+
+.promo-section p {
+    margin-bottom: 1.25rem;
+}
+
+.btn-promo {
+    background-color: var(--orange);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: 2px solid var(--orange);
+}
+
+.btn-promo:hover {
+    background-color: var(--white);
+    color: var(--orange);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.hero-promo {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--royal-blue);
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    font-weight: 600;
+    border: 2px solid var(--white);
+}
+
+.hero-promo span {
+    color: var(--orange);
+}
+
+@media (max-width: 768px) {
+    .promo-banner {
+        padding: 0.5rem;
+        font-size: 0.875rem;
+    }
+    
+    .hero-promo {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,110 @@
+/* Final fixes for button visibility and checkmark alignment */
+
+/* Make "See Features" button more visible on blue background */
+.btn-outline,
+.btn-secondary,
+a[href*="features.html"] {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: var(--royal-blue);
+    border: 2px solid var(--white);
+    font-weight: 600;
+    text-shadow: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-outline:hover,
+.btn-secondary:hover,
+a[href*="features.html"]:hover {
+    background-color: var(--white);
+    color: var(--royal-blue);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific fix for "See Features" button on hero section */
+.hero-section a[href*="features.html"],
+.hero-cta a[href*="features.html"],
+.hero-section .btn-outline {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: var(--royal-blue);
+    border: 2px solid var(--white);
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Fix checkmark alignment in feature lists */
+.feature-card ul,
+.benefit-card ul,
+.owner-benefits,
+.feature-benefits {
+    list-style: none;
+    padding-left: 0;
+}
+
+.feature-card li,
+.benefit-card li,
+.owner-benefits li,
+.feature-benefits li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+    position: relative;
+}
+
+.feature-card li i,
+.benefit-card li i,
+.owner-benefits li i,
+.feature-benefits li i,
+li .fas.fa-check {
+    color: var(--orange);
+    margin-right: 0.75rem;
+    margin-top: 0.25rem;
+    flex-shrink: 0;
+    min-width: 16px;
+    text-align: center;
+}
+
+/* Additional fix for checkmarks in all lists */
+ul li {
+    position: relative;
+}
+
+ul li .fas.fa-check,
+ul li i.fas.fa-check {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-right: 0.75rem;
+}
+
+/* Fix for bullet points with checkmarks */
+ul li::before {
+    display: none;
+}
+
+/* Fix for the specific feature list checkmarks */
+.feature-card ul li,
+.benefit-card ul li {
+    padding-left: 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Fix for mobile view checkmark alignment */
+@media (max-width: 768px) {
+    .feature-card li,
+    .benefit-card li,
+    .owner-benefits li,
+    .feature-benefits li {
+        padding-left: 0;
+    }
+    
+    .feature-card li i,
+    .benefit-card li i,
+    .owner-benefits li i,
+    .feature-benefits li i,
+    li .fas.fa-check {
+        position: relative;
+        top: 2px;
+    }
+}

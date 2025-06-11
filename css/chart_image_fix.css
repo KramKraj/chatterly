@@ -1,0 +1,45 @@
+/* Targeted fix for Resources page chart images on desktop */
+@media (min-width: 768px) {
+    /* Blog article chart images */
+    .blog-card img[src*="chart"],
+    .blog-card img[src*="graph"],
+    .resource-card img[src*="chart"],
+    .resource-card img[src*="graph"],
+    .blog-content img[src*="chart"],
+    .blog-content img[src*="graph"],
+    .resource-image img[src*="chart"],
+    .resource-image img[src*="graph"] {
+        max-width: 100%;
+        height: auto;
+        max-height: 200px;
+        object-fit: contain;
+    }
+    
+    /* Latest articles section */
+    .latest-articles img,
+    .latest-articles .chart-image,
+    .latest-articles .graph-image {
+        max-height: 180px;
+        width: auto;
+        object-fit: contain;
+    }
+    
+    /* Specific fix for the ROI calculator chart */
+    img[alt*="ROI"],
+    img[alt*="roi"],
+    img[src*="roi"],
+    img[src*="ROI"],
+    img[src*="calculator"],
+    img[src*="Calculator"] {
+        max-height: 200px !important;
+        width: auto !important;
+        object-fit: contain !important;
+    }
+    
+    /* General fix for all large images in resource sections */
+    .resource-section img {
+        max-height: 220px;
+        width: auto;
+        object-fit: contain;
+    }
+}

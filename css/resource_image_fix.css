@@ -1,0 +1,58 @@
+/* Enhanced Resource page image sizing for desktop */
+@media (min-width: 768px) {
+    /* Resource card images */
+    .resource-card .resource-image {
+        height: 160px;
+        overflow: hidden;
+    }
+    
+    .resource-card .resource-image img {
+        max-height: 160px;
+        object-fit: cover;
+    }
+    
+    /* Blog images */
+    .blog-card-image {
+        height: 140px;
+        overflow: hidden;
+    }
+    
+    .blog-card-image img {
+        max-height: 140px;
+        object-fit: cover;
+    }
+    
+    /* Template previews */
+    .template-preview img {
+        max-height: 180px;
+        object-fit: contain;
+    }
+    
+    /* Guide icons */
+    .guide-icon {
+        transform: scale(0.85);
+        max-width: 80px;
+    }
+    
+    /* Webinar thumbnails */
+    .webinar-thumbnail {
+        height: 150px;
+        overflow: hidden;
+    }
+    
+    .webinar-thumbnail img {
+        max-height: 150px;
+        object-fit: cover;
+    }
+    
+    /* Case study images */
+    .case-study-image {
+        height: 140px;
+        overflow: hidden;
+    }
+    
+    .case-study-image img {
+        max-height: 140px;
+        object-fit: cover;
+    }
+}

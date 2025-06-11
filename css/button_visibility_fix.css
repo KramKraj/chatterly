@@ -1,0 +1,83 @@
+/* Enhanced button visibility fixes */
+
+/* Specific fix for the Compare Features button on blue backgrounds */
+a[href*="features.html"].btn-outline,
+a[href*="features.html"].btn-secondary,
+.btn-compare-features,
+.hero-section a[href*="features.html"],
+.features-section a[href*="features.html"],
+a.btn-outline[href*="features.html"] {
+    background-color: var(--white) !important;
+    color: var(--royal-blue) !important;
+    border: 3px solid var(--white) !important;
+    font-weight: 700 !important;
+    text-shadow: none !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
+    padding: 0.85rem 2rem !important;
+    font-size: 1.1rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    position: relative !important;
+    z-index: 5 !important;
+    transition: all 0.3s ease !important;
+}
+
+a[href*="features.html"].btn-outline:hover,
+a[href*="features.html"].btn-secondary:hover,
+.btn-compare-features:hover,
+.hero-section a[href*="features.html"]:hover,
+.features-section a[href*="features.html"]:hover,
+a.btn-outline[href*="features.html"]:hover {
+    background-color: var(--orange) !important;
+    color: var(--white) !important;
+    border-color: var(--orange) !important;
+    transform: translateY(-5px) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Add a subtle glow effect to make it more noticeable */
+a[href*="features.html"].btn-outline,
+a[href*="features.html"].btn-secondary,
+.btn-compare-features,
+.hero-section a[href*="features.html"],
+.features-section a[href*="features.html"],
+a.btn-outline[href*="features.html"] {
+    animation: button-pulse 2s infinite;
+}
+
+@keyframes button-pulse {
+    0% {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+    50% {
+        box-shadow: 0 4px 20px rgba(255, 255, 255, 0.4);
+    }
+    100% {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+}
+
+/* Ensure the button is visible in all sections with blue backgrounds */
+.hero-section .btn-outline,
+.cta-section .btn-outline,
+section.blue-bg .btn-outline,
+.hero-section a[href*="features.html"],
+.features-section a[href*="features.html"],
+.cta-section a[href*="features.html"],
+section.blue-bg a[href*="features.html"] {
+    background-color: var(--white) !important;
+    color: var(--royal-blue) !important;
+    border: 3px solid var(--white) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: inline-block !important;
+}
+
+/* Fix for the specific button in the hero section */
+.hero-cta .btn-outline {
+    background-color: var(--white) !important;
+    color: var(--royal-blue) !important;
+    border: 3px solid var(--white) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}

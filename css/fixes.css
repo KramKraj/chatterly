@@ -1,0 +1,31 @@
+/* Additional CSS for blog image sizing */
+.blog-image-small {
+    max-height: 180px;
+    overflow: hidden;
+}
+
+.blog-image-small img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.tech-partners-image {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Consistent logo styling */
+.logo img {
+    height: auto;
+    max-height: 60px;
+    width: auto;
+}
+
+.footer-logo img {
+    height: auto;
+    max-height: 50px;
+    width: auto;
+}

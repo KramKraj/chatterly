@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solutions - Chatterly</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-text">Chatterly</span>
+                </a>
+            </div>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="solutions.html" class="active">Solutions</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+            </nav>
+            <div class="cta-button">
+                <a href="trial-signup.html" class="btn btn-primary">Start Free Trial</a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1>Solutions for Every Industry</h1>
+                <p>Tailored chatbot solutions to meet your specific business needs</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="solutions-tabs">
+        <div class="container">
+            <div class="tabs-container">
+                <div class="tabs-header">
+                    <button class="tab-button active" data-tab="industries">By Industry</button>
+                    <button class="tab-button" data-tab="departments">By Department</button>
+                    <button class="tab-button" data-tab="use-cases">By Use Case</button>
+                </div>
+                <div class="tabs-content">
+                    <div class="tab-pane active" id="industries">
+                        <div class="solutions-grid">
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                                <h3>E-commerce</h3>
+                                <p>Boost sales, reduce cart abandonment, and provide 24/7 customer support.</p>
+                                <ul class="solution-features">
+                                    <li>Product recommendations</li>
+                                    <li>Cart recovery automation</li>
+                                    <li>Order status tracking</li>
+                                    <li>Instant customer support</li>
+                                </ul>
+                                <a href="#" class="btn btn-outline">Learn More</a>
+                            </div>
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fas fa-laptop-code"></i>
+                                </div>
+                                <h3>SaaS & Technology</h3>
+                                <p>Generate qualified leads, provide technical support, and streamline onboarding.</p>
+                                <ul class="solution-features">
+                                    <li>Lead qualification</li>
+                                    <li>Technical support automation</li>
+                                    <li>User onboarding assistance</li>
+                                    <li>Feature education</li>
+                                </ul>
+                                <a href="#" class="btn btn-outline">Learn More</a>
+                            </div>
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                                <h3>Real Estate</h3>
+                                <p>Qualify leads, schedule viewings, and provide property information 24/7.</p>
+                                <ul class="solution-features">
+                                    <li>Property inquiry handling</li>
+                                    <li>Viewing scheduling</li>
+                                    <li>Mortgage calculator</li>
+                                    <li>Neighborhood information</li>
+                                </ul>
+                                <a href="#" class="btn btn-outline">Learn More</a>
+                            </div>
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fas fa-university"></i>
+                                </div>
+                                <h3>Financial Services</h3>
+                                <p>Provide financial guidance, qualify prospects, and streamline customer service.</p>
+                                <ul class="solution-features">
+                                    <li>Financial product guidance</li>
+                                    <li>Application assistance</li>
+                                    <li>Account inquiries</li>
+                                    <li>Financial calculator</li>
+                                </ul>
+                                <a href="#" class="btn btn-outline">Learn More</a>
+                            </div>
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fas fa-hotel"></i>
+                                </div>
+                                <h3>Hospitality</h3>
+                                <p>Streamline bookings, answer FAQs, and enhance guest experiences.</p>
+                                <ul class="solution-features">
+                                    <li>Booking assistance</li>
+                                    <li>Room availability checking</li>
+                                    <li>Local recommendations</li>
+                                    <li>Guest service requests</li>
+                                </ul>
+                                <a href="#" class="btn btn-outline">Learn More</a>
+                            </div>
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fas fa-stethoscope"></i>
+                                </div>
+                                <h3>Healthcare</h3>
+                                <p>Schedule appointments, answer patient questions, and provide health information.</p>
+                                <ul class="solution-features">
+                                    <li>Appointment scheduling</li>
+                                    <li>Medical information</li>
+                                    <li>Insurance verification</li>
+                                    <li>Symptom checking</li>
+                                </ul>
+                                <a href="#" class="btn btn-outline">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="departments">
+                        <div class="solutions-grid">
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fas fa-bullhorn"></i>
+                                </div>
+                                <h3>Marketing</h3>
+                                <p>Generate leads, qualify prospects, and nurture potential customers.</p>
+                                <ul class="solution-features">
+                                    <li>Lead generation</li>
+                                    <li>Campaign automation</li>
+                                    <li>Content distribution</li>
+                                    <li>Event registration</li>
+                                </ul>
+                                <a href="#" class="btn btn-outline">Learn More</a>
+                            </div>
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h3>Sales</h3>
+                                <p>Qualify leads, book meetings, and close deals more efficiently.</p>
+                                <ul class="solution-features">
+                                    <li>Lead qualification</li>
+                                    <li>Meeting scheduling</li>
+                                    <li>Product demonstrations</li>
+                                    <li>Quote generation</li>
+                                </ul>
+                                <a href="#" class="btn btn-outline">Learn More</a>
+                            </div>
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fas fa-headset"></i>
+                                </div>
+                                <h3>Customer Support</h3>
+                                <p>Provide instant answers, resolve issues, and escalate when necessary.</p>
+                                <ul class="solution-features">
+                                    <li>24/7 support automation</li>
+                                    <li>Ticket creation</li>
+                                    <li>FAQ handling</li>
+                                    <li>Human handoff</li>
+                                </ul>
+                                <a href="#" class="btn btn-outline">Learn More</a>
+                            </div>
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h3>Human Resources</h3>
+                                <p>Streamline recruitment, answer employee questions, and automate HR processes.</p>
+                                <ul class="solution-features">
+                                    <li>Applicant screening</li>
+                                    <li>Interview scheduling</li>
+                                    <li>Employee onboarding</li>
+                                    <li>HR policy information</li>
+                                </ul>
+                                <a href="#" class="btn btn-outline">Learn More</a>
+                            </div>
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <h3>Operations</h3>
+                                <p>Automate workflows, manage inquiries, and improve operational efficiency.</p>
+                                <ul class="solution-features">
+                                    <li>Process automation</li>
+                                    <li>Inventory inquiries</li>
+                                    <li>Order management</li>
+                                    <li>Supplier communication</li>
+                                </ul>
+                                <a href="#" class="btn btn-outline">Learn More</a>
+                            </div>
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <h3>Education & Training</h3>
+                                <p>Facilitate learning, answer student questions, and automate administrative tasks.</p>
+                                <ul class="solution-features">
+                                    <li>Course information</li>
+                                    <li>Enrollment assistance</li>
+                                    <li>Learning support</li>
+                                    <li>Administrative help</li>
+                                </ul>
+                                <a href="#" class="btn btn-outline">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="use-cases">
+                        <div class="solutions-grid">
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fas fa-user-plus"></i>
+                                </div>
+                                <h3>Lead Generation</h3>
+                                <p>Capture and qualify leads 24/7, even when your team is offline.</p>
+                                <ul class="solution-features">
+                                    <li>Visitor engagement</li>
+                                    <li>Lead qualification</li>
+                                    <li>Contact information capture</li>
+                                    <li>CRM integration</li>
+                                </ul>
+                                <a href="#" class="btn btn-outline">Learn More</a>
+                            </div>
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fas fa-calendar-check"></i>
+                                </div>
+                                <h3>Appointment Booking</h3>
+                                <p>Let visitors book meetings, demos, or appointments without human intervention.</p>
+                                <ul class="solution-features">
+                                    <li>Calendar integration</li>
+                                    <li>Availability checking</li>
+                                    <li>Reminder automation</li>
+                                    <li>Rescheduling assistance</li>
+                                </ul>
+                                <a href="#" class="btn btn-outline">Learn More</a>
+                            </div>
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fas fa-question-circle"></i>
+                                </div>
+                                <h3>FAQ Automation</h3>
+                                <p>Answer common questions instantly and free up your team for complex inquiries.</p>
+                                <ul class="solution-features">
+                                    <li>24/7 question answering</li>
+                                    <li>Knowledge base integration</li>
+                                    <li>Contextual responses</li>
+                                    <li>Human escalation</li>
+                                </ul>
+                                <a href="#" class="btn btn-outline">Learn More</a>
+                            </div>
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fas fa-shopping-bag"></i>
+                                </div>
+                                <h3>Product Recommendations</h3>
+                                <p>Guide customers to the right products based on their needs and preferences.</p>
+                                <ul class="solution-features">
+                                    <li>Personalized suggestions</li>
+                                    <li>Product comparison</li>
+                                    <li>Feature explanation</li>
+                                    <li>Purchase assistance</li>
+                                </ul>
+                                <a href="#" class="btn btn-outline">Learn More</a>
+                            </div>
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <h3>Email Marketing Enhancement</h3>
+                                <p>Boost email campaign performance with chatbot follow-ups and engagement.</p>
+                                <ul class="solution-features">
+                                    <li>Campaign follow-up</li>
+                                    <li>Personalized engagement</li>
+                                    <li>Lead nurturing</li>
+                                    <li>Conversion optimization</li>
+                                </ul>
+                                <a href="#" class="btn btn-outline">Learn More</a>
+                            </div>
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fas fa-user-check"></i>
+                                </div>
+                                <h3>Customer Onboarding</h3>
+                                <p>Guide new customers through setup, answer questions, and ensure successful adoption.</p>
+                                <ul class="solution-features">
+                                    <li>Setup assistance</li>
+                                    <li>Feature education</li>
+                                    <li>Common issue resolution</li>
+                                    <li>Success milestone tracking</li>
+                                </ul>
+                                <a href="#" class="btn btn-outline">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="case-studies">
+        <div class="container">
+            <div class="section-header">
+                <h2>Success Stories</h2>
+                <p>See how businesses like yours are succeeding with Chatterly</p>
+            </div>
+            <div class="case-studies-grid">
+                <div class="case-study-card">
+                    <div class="case-study-image">
+                        <img src="images/case-study-1.jpg" alt="TechSolutions Inc. Case Study">
+                    </div>
+                    <div class="case-study-content">
+                        <div class="case-study-tag">E-commerce</div>
+                        <h3>How ShopEasy Increased Conversions by 37%</h3>
+                        <p>ShopEasy implemented Chatterly to engage visitors, answer product questions, and recover abandoned carts.</p>
+                        <div class="case-study-results">
+                            <div class="result-item">
+                                <div class="result-number">37%</div>
+                                <div class="result-label">Conversion Increase</div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-number">42%</div>
+                                <div class="result-label">Cart Recovery</div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-number">3.2x</div>
+                                <div class="result-label">ROI</div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-outline">Read Case Study</a>
+                    </div>
+                </div>
+                <div class="case-study-card">
+                    <div class="case-study-image">
+                        <img src="images/case-study-2.jpg" alt="TechSolutions Inc. Case Study">
+                    </div>
+                    <div class="case-study-content">
+                        <div class="case-study-tag">SaaS</div>
+                        <h3>TechSolutions Automated 78% of Support Inquiries</h3>
+                        <p>TechSolutions used Chatterly to handle common support questions and guide users through technical issues.</p>
+                        <div class="case-study-results">
+                            <div class="result-item">
+                                <div class="result-number">78%</div>
+                                <div class="result-label">Support Automation</div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-number">64%</div>
+                                <div class="result-label">Faster Resolution</div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-number">$45K</div>
+                                <div class="result-label">Monthly Savings</div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-outline">Read Case Study</a>
+                    </div>
+                </div>
+                <div class="case-study-card">
+                    <div class="case-study-image">
+                        <img src="images/case-study-3.jpg" alt="TechSolutions Inc. Case Study">
+                    </div>
+                    <div class="case-study-content">
+                        <div class="case-study-tag">Real Estate</div>
+                        <h3>HomeFind Generated 2.5x More Qualified Leads</h3>
+                        <p>HomeFind implemented Chatterly to qualify prospects, schedule viewings, and provide property information.</p>
+                        <div class="case-study-results">
+                            <div class="result-item">
+                                <div class="result-number">2.5x</div>
+                                <div class="result-label">Lead Increase</div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-number">68%</div>
+                                <div class="result-label">Qualification Rate</div>
+                            </div>
+                            <div class="result-item">
+                                <div class="result-number">41%</div>
+                                <div class="result-label">More Viewings</div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-outline">Read Case Study</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="solution-process">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Getting started with Chatterly is quick and easy</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Select a Template</h3>
+                    <p>Choose from industry-specific templates designed for your business needs.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-sliders-h"></i>
+                    </div>
+                    <h3>Customize</h3>
+                    <p>Tailor your chatbot's appearance, questions, and responses to match your brand.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Integrate</h3>
+                    <p>Add your chatbot to your website with a simple code snippet or integration.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Optimize</h3>
+                    <p>Analyze performance and refine your chatbot for even better results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Find Your Perfect Solution?</h2>
+                <p>Try Chatterly free for 14 days. No credit card required.</p>
+                <div class="cta-buttons">
+                    <a href="trial-signup.html" class="btn btn-primary btn-large">Start Your Free Trial</a>
+                    <a href="contact.html" class="btn btn-outline btn-large">Schedule a Demo</a>
+                </div>
+                <div class="cta-guarantee">
+                    <i class="fas fa-shield-check"></i>
+                    <p>30-day money-back guarantee. No questions asked.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-text">Chatterly</span>
+                    </div>
+                    <p>Smart. Friendly. Automated Conversations That Close.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="solutions.html">Solutions</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="resources.html#guides">Guides</a></li>
+                        <li><a href="resources.html#templates">Templates</a></li>
+                        <li><a href="resources.html#webinars">Webinars</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Subscribe</h4>
+                    <p>Get the latest updates and tips</p>
+                    <form class="footer-subscribe">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Chatterly. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Solutions tabs functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Hide all tab panes
+                    tabPanes.forEach(pane => pane.classList.remove('active'));
+                    
+                    // Show the corresponding tab pane
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

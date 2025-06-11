@@ -1,0 +1,95 @@
+/* Fix for hamburger menu visibility on all tabs */
+.mobile-menu-toggle {
+    display: none !important;
+}
+
+@media (max-width: 992px) {
+    .mobile-menu-toggle {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: var(--royal-blue);
+        color: var(--white);
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+        font-size: 1.25rem;
+        position: relative;
+        z-index: 1000;
+    }
+}
+
+/* Remove checkmarks and align bullets in feature lists */
+.feature-card li i.fas.fa-check,
+.benefit-card li i.fas.fa-check,
+.owner-benefits li i.fas.fa-check,
+.feature-benefits li i.fas.fa-check {
+    display: none;
+}
+
+.feature-card ul,
+.benefit-card ul,
+.owner-benefits,
+.feature-benefits {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+.feature-card li,
+.benefit-card li,
+.owner-benefits li,
+.feature-benefits li {
+    display: list-item;
+    padding-left: 0;
+    margin-bottom: 0.75rem;
+}
+
+/* Reduce Resources page image sizes on desktop */
+@media (min-width: 768px) {
+    .blog-card-image {
+        height: 140px;
+    }
+    
+    .blog-card-image img {
+        max-height: 140px;
+    }
+    
+    .template-preview img {
+        max-height: 180px;
+    }
+    
+    .guide-icon {
+        transform: scale(0.85);
+    }
+}
+
+/* Improve Features page visibility on all devices */
+.features-section a[href*="features.html"],
+.features-section .btn-outline,
+.features-section .btn-secondary {
+    background-color: var(--white) !important;
+    color: var(--royal-blue) !important;
+    border: 3px solid var(--white) !important;
+    font-weight: 700 !important;
+    text-shadow: none !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
+    padding: 0.85rem 2rem !important;
+    font-size: 1.1rem !important;
+    position: relative !important;
+    z-index: 5 !important;
+    transition: all 0.3s ease !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.features-section a[href*="features.html"]:hover,
+.features-section .btn-outline:hover,
+.features-section .btn-secondary:hover {
+    background-color: var(--orange) !important;
+    color: var(--white) !important;
+    border-color: var(--orange) !important;
+    transform: translateY(-5px) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
+}
